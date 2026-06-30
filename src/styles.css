@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
-@import 'tw-animate-css';
+@import "tw-animate-css";
 
 @import "tw-animate-css";
 
@@ -11,409 +11,252 @@
 @import "@fontsource-variable/roboto";
 
 @font-face {
-  font-family: 'Kanit';
-  src: url('/fonts/Kanit-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Kanit";
+    src: url("/fonts/Kanit-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ==========================================================================
+    /* ==========================================================================
      PALETA BASE (Para uso en selectores nativos)
      ========================================================================== */
-  --color-rojo: #bf1721;        /* rgb(191, 23, 33) */
-  --color-crema: #f4d5b6;       /* rgb(244, 213, 182) */
-  --color-crema-claro: #fcf8f2; /* Fondo cálido ultra suave */
-  --color-negro: #0d0d0d;       /* Negro suavizado para legibilidad */
-  --color-blanco: #ffffff;
+    --color-rojo: #bf1721;
+    /* rgb(191, 23, 33) */
+    --color-crema: #f4d5b6;
+    /* rgb(244, 213, 182) */
+    --color-crema-claro: #fcf8f2;
+    /* Fondo cálido ultra suave */
+    --color-negro: #0d0d0d;
+    /* Negro suavizado para legibilidad */
+    --color-blanco: #ffffff;
 
-  /* ==========================================================================
+    /* ==========================================================================
      MIGUÍA SHADCN - MODO CLARO (Estructura total)
      ========================================================================== */
-  /* Fondo general y texto principal */
-  --background: oklch(0.98 0.01 50);          /* Fondo crema claro */
-  --foreground: oklch(0.12 0.01 20);          /* Texto Negro */
+    /* Fondo general y texto principal */
+    --background: oklch(100% 0.00011 271.152);
+    /* Fondo blanco */
+    --foreground: oklch(0.12 0.01 20);
+    /* Texto Negro */
 
-  /* Componentes tipo Tarjeta / Cards */
-  --card: oklch(1 0 0);                       /* Blanco puro */
-  --card-foreground: oklch(0.12 0.01 20);     /* Texto Negro */
+    /* Componentes tipo Tarjeta / Cards */
+    --card: oklch(1 0 0);
+    /* Blanco puro */
+    --card-foreground: oklch(0.12 0.01 20);
+    /* Texto Negro */
 
-  /* Popovers, Desplegables, Menús */
-  --popover: oklch(1 0 0);                    /* Blanco puro */
-  --popover-foreground: oklch(0.12 0.01 20);  /* Texto Negro */
+    /* Popovers, Desplegables, Menús */
+    --popover: oklch(1 0 0);
+    /* Blanco puro */
+    --popover-foreground: oklch(0.12 0.01 20);
+    /* Texto Negro */
 
-  /* ELEMENTO ELEMENTAL: Botones Primarios, Badges activos, etc. */
-  --primary: oklch(0.46 0.21 26.5);           /* Rojo Perfecto (rgb 191 23 33) */
-  --primary-foreground: oklch(1 0 0);         /* Texto Blanco sobre fondo Rojo */
+    /* ELEMENTO ELEMENTAL: Botones Primarios, Badges activos, etc. */
+    --primary: oklch(0.46 0.21 26.5);
+    /* Rojo Perfecto (rgb 191 23 33) */
+    --primary-foreground: oklch(1 0 0);
+    /* Texto Blanco sobre fondo Rojo */
 
-  /* Elementos Secundarios (Botones secundarios, badges mutados) */
-  --secondary: oklch(0.88 0.06 64.5);         /* Crema Perfecto (rgb 244 213 182) */
-  --secondary-foreground: oklch(0.12 0.01 20);/* Texto Negro sobre fondo Crema */
+    /* Elementos Secundarios (Botones secundarios, badges mutados) */
+    --secondary: oklch(0.88 0.06 64.5);
+    /* Crema Perfecto (rgb 244 213 182) */
+    --secondary-foreground: oklch(0.12 0.01 20);
+    /* Texto Negro sobre fondo Crema */
 
-  /* Estados Desactivados o Apagados (Muted) */
-  --muted: oklch(0.94 0.02 65);               /* Crema muy lavado para desvanecer */
-  --muted-foreground: oklch(0.45 0.02 45);    /* Gris cálido para textos secundarios */
+    /* Estados Desactivados o Apagados (Muted) */
+    --muted: oklch(0.94 0.02 65);
+    /* Crema muy lavado para desvanecer */
+    --muted-foreground: oklch(0.45 0.02 45);
+    /* Gris cálido para textos secundarios */
 
-  /* Estados de Enfoque, Selección y Hovers genéricos (Botón Ghost) */
-  --accent: oklch(0.92 0.04 64);              /* Crema claro interactivo */
-  --accent-foreground: oklch(0.46 0.21 26.5); /* Texto Rojo en el hover */
+    /* Estados de Enfoque, Selección y Hovers genéricos (Botón Ghost) */
+    --accent: oklch(0.92 0.04 64);
+    /* Crema claro interactivo */
+    --accent-foreground: oklch(0.46 0.21 26.5);
+    /* Texto Rojo en el hover */
 
-  /* Destructivo (Mantiene coherencia usando variantes del Rojo) */
-  --destructive: oklch(0.40 0.21 26.5);      /* Rojo oscuro */
-  --destructive-foreground: oklch(1 0 0);     /* Texto Blanco */
+    /* Destructivo (Mantiene coherencia usando variantes del Rojo) */
+    --destructive: oklch(0.4 0.21 26.5);
+    /* Rojo oscuro */
+    --destructive-foreground: oklch(1 0 0);
+    /* Texto Blanco */
 
-  /* Líneas, Bordes de Inputs y Enfoques visuales (Focus) */
-  --border: oklch(0.85 0.04 65);              /* Bordes definidos en tono crema oscuro */
-  --input: oklch(0.85 0.04 65);               /* Bordes de inputs */
-  --ring: oklch(0.46 0.21 26.5);              /* El aro de enfoque (Focus Ring) será Rojo */
+    /* Líneas, Bordes de Inputs y Enfoques visuales (Focus) */
+    --border: oklch(0.85 0.04 65);
+    /* Bordes definidos en tono crema oscuro */
+    --input: oklch(0.85 0.04 65);
+    /* Bordes de inputs */
+    --ring: oklch(0.46 0.21 26.5);
+    /* El aro de enfoque (Focus Ring) será Rojo */
 
-  /* Gráficos / Charts (Derivados armónicos de Rojo, Crema y Negro) */
-  --chart-1: oklch(0.46 0.21 26.5);           /* Rojo */
-  --chart-2: oklch(0.88 0.06 64.5);           /* Crema */
-  --chart-3: oklch(0.25 0.02 25);             /* Negro carbón */
-  --chart-4: oklch(0.65 0.12 35);             /* Terracota medio */
-  --chart-5: oklch(0.93 0.05 70);             /* Crema pálido */
+    /* Gráficos / Charts (Derivados armónicos de Rojo, Crema y Negro) */
+    --chart-1: oklch(0.46 0.21 26.5);
+    /* Rojo */
+    --chart-2: oklch(0.88 0.06 64.5);
+    /* Crema */
+    --chart-3: oklch(0.25 0.02 25);
+    /* Negro carbón */
+    --chart-4: oklch(0.65 0.12 35);
+    /* Terracota medio */
+    --chart-5: oklch(0.93 0.05 70);
+    /* Crema pálido */
 
-  /* Barras laterales / Sidebar de Shadcn */
-  --sidebar: oklch(0.96 0.02 55);
-  --sidebar-foreground: oklch(0.12 0.01 20);
-  --sidebar-primary: oklch(0.46 0.21 26.5);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.88 0.06 64.5);
-  --sidebar-accent-foreground: oklch(0.12 0.01 20);
-  --sidebar-border: oklch(0.85 0.04 65);
-  --sidebar-ring: oklch(0.46 0.21 26.5);
+    /* Barras laterales / Sidebar de Shadcn */
+    --sidebar: oklch(0.96 0.02 55);
+    --sidebar-foreground: oklch(0.12 0.01 20);
+    --sidebar-primary: oklch(0.46 0.21 26.5);
+    --sidebar-primary-foreground: oklch(1 0 0);
+    --sidebar-accent: oklch(0.88 0.06 64.5);
+    --sidebar-accent-foreground: oklch(0.12 0.01 20);
+    --sidebar-border: oklch(0.85 0.04 65);
+    --sidebar-ring: oklch(0.46 0.21 26.5);
 
-  --radius: 0.5rem;
+    --radius: 0.5rem;
 
-  /* ==========================================================================
+    /* ==========================================================================
      REDIRECCIÓN DE TUS VARIABLES PERSONALIZADAS DEL LAYOUT
      ========================================================================== */
-  --sea-ink: var(--color-negro);
-  --sea-ink-soft: oklch(0.45 0.02 45);
-  --lagoon: var(--color-rojo);
-  --lagoon-deep: oklch(0.38 0.18 26.5);
-  --palm: var(--color-negro);
-  --sand: var(--color-crema-claro);
-  --foam: var(--color-blanco);
-  --surface: rgba(255, 255, 255, 0.75);
-  --surface-strong: rgba(255, 255, 255, 0.95);
-  --line: oklch(0.12 0.01 20 / 12%);
-  --inset-glint: rgba(255, 255, 255, 0.85);
-  --kicker: var(--color-rojo);
-  --bg-base: var(--color-crema-claro);
-  --header-bg: rgba(252, 248, 242, 0.85);
-  --chip-bg: var(--color-crema);
-  --chip-line: rgba(191, 23, 33, 0.15);
-  --link-bg-hover: rgba(191, 23, 33, 0.05);
-  --hero-a: rgba(244, 213, 182, 0.4);
-  --hero-b: rgba(191, 23, 33, 0.06);
+    --sea-ink: var(--color-negro);
+    --sea-ink-soft: oklch(0.45 0.02 45);
+    --lagoon: var(--color-rojo);
+    --lagoon-deep: oklch(0.38 0.18 26.5);
+    --palm: var(--color-negro);
+    --sand: var(--color-crema-claro);
+    --foam: var(--color-blanco);
+    --surface: rgba(255, 255, 255, 0.75);
+    --surface-strong: rgba(255, 255, 255, 0.95);
+    --line: oklch(0.12 0.01 20 / 12%);
+    --inset-glint: rgba(255, 255, 255, 0.85);
+    --kicker: var(--color-rojo);
+    --bg-base: var(--color-crema-claro);
+    --header-bg: rgba(252, 248, 242, 0.85);
+    --chip-bg: var(--color-crema);
+    --chip-line: rgba(191, 23, 33, 0.15);
+    --link-bg-hover: rgba(191, 23, 33, 0.05);
+    --hero-a: rgba(244, 213, 182, 0.4);
+    --hero-b: rgba(191, 23, 33, 0.06);
 }
 
 .dark {
-  /* ==========================================================================
+    /* ==========================================================================
      MIGUÍA SHADCN - MODO OSCURO (Inversión Completa)
      ========================================================================== */
-  --background: oklch(0.12 0.01 20);          /* Fondo Negro Sólido */
-  --foreground: oklch(0.98 0 0);              /* Texto Blanco */
-  
-  --card: oklch(0.16 0.01 20);                /* Tarjetas Gris-Negro muy oscuro */
-  --card-foreground: oklch(0.98 0 0);
-  
-  --popover: oklch(0.14 0.01 20);
-  --popover-foreground: oklch(0.98 0 0);
-  
-  /* Los botones primarios se mantienen Rojos en modo oscuro para el 'Pop' visual */
-  --primary: oklch(0.46 0.21 26.5);           /* Rojo Principal */
-  --primary-foreground: oklch(1 0 0);         /* Texto Blanco */
-  
-  /* El secundario en modo oscuro pasa a ser Negro Brillante / Gris Industrial */
-  --secondary: oklch(0.22 0.01 20);
-  --secondary-foreground: oklch(0.88 0.06 64.5); /* Texto Crema destacado */
-  
-  --muted: oklch(0.20 0.01 20);
-  --muted-foreground: oklch(0.65 0.02 50);    /* Blanco desgastado */
-  
-  --accent: oklch(0.22 0.01 20);
-  --accent-foreground: oklch(0.88 0.06 64.5); /* Hover resalta texto Crema */
-  
-  --destructive: oklch(0.46 0.21 26.5);
-  --destructive-foreground: oklch(1 0 0);
-  
-  --border: oklch(0.25 0.01 20);              /* Bordes oscuros sutiles */
-  --input: oklch(0.25 0.01 20);
-  --ring: oklch(0.46 0.21 26.5);              /* Aro de enfoque Rojo */
+    --background: oklch(0.12 0.01 20);
+    /* Fondo Negro Sólido */
+    --foreground: oklch(0.98 0 0);
+    /* Texto Blanco */
 
-  --sidebar: oklch(0.14 0.01 20);
-  --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.46 0.21 26.5);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.22 0.01 20);
-  --sidebar-accent-foreground: oklch(0.88 0.06 64.5);
-  --sidebar-border: oklch(0.25 0.01 20);
-  --sidebar-ring: oklch(0.46 0.21 26.5);
+    --card: oklch(0.16 0.01 20);
+    /* Tarjetas Gris-Negro muy oscuro */
+    --card-foreground: oklch(0.98 0 0);
 
-  /* Re-ajuste de variables de layout para consistencia en Dark Mode */
-  --sea-ink: #ffffff;
-  --sea-ink-soft: oklch(0.65 0.02 50);
-  --lagoon: var(--color-crema);
-  --lagoon-deep: #ffffff;
-  --palm: var(--color-rojo);
-  --sand: #121212;
-  --foam: #1a1a1a;
-  --surface: rgba(20, 20, 20, 0.7);
-  --surface-strong: rgba(26, 26, 26, 0.9);
-  --line: rgba(255, 255, 255, 0.1);
-  --inset-glint: rgba(255, 255, 255, 0.05);
-  --kicker: var(--color-crema);
-  --bg-base: #0a0a0a;
-  --header-bg: rgba(13, 13, 13, 0.85);
-  --chip-bg: rgba(35, 35, 35, 0.9);
-  --chip-line: rgba(244, 213, 182, 0.2);
-  --link-bg-hover: rgba(255, 255, 255, 0.04);
-  --hero-a: rgba(191, 23, 33, 0.12);
-  --hero-b: rgba(0, 0, 0, 0.5);
+    --popover: oklch(0.14 0.01 20);
+    --popover-foreground: oklch(0.98 0 0);
+
+    /* Los botones primarios se mantienen Rojos en modo oscuro para el 'Pop' visual */
+    --primary: oklch(0.46 0.21 26.5);
+    /* Rojo Principal */
+    --primary-foreground: oklch(1 0 0);
+    /* Texto Blanco */
+
+    /* El secundario en modo oscuro pasa a ser Negro Brillante / Gris Industrial */
+    --secondary: oklch(0.22 0.01 20);
+    --secondary-foreground: oklch(0.88 0.06 64.5);
+    /* Texto Crema destacado */
+
+    --muted: oklch(0.2 0.01 20);
+    --muted-foreground: oklch(0.65 0.02 50);
+    /* Blanco desgastado */
+
+    --accent: oklch(0.22 0.01 20);
+    --accent-foreground: oklch(0.88 0.06 64.5);
+    /* Hover resalta texto Crema */
+
+    --destructive: oklch(0.46 0.21 26.5);
+    --destructive-foreground: oklch(1 0 0);
+
+    --border: oklch(0.25 0.01 20);
+    /* Bordes oscuros sutiles */
+    --input: oklch(0.25 0.01 20);
+    --ring: oklch(0.46 0.21 26.5);
+    /* Aro de enfoque Rojo */
+
+    --sidebar: oklch(0.14 0.01 20);
+    --sidebar-foreground: oklch(0.98 0 0);
+    --sidebar-primary: oklch(0.46 0.21 26.5);
+    --sidebar-primary-foreground: oklch(1 0 0);
+    --sidebar-accent: oklch(0.22 0.01 20);
+    --sidebar-accent-foreground: oklch(0.88 0.06 64.5);
+    --sidebar-border: oklch(0.25 0.01 20);
+    --sidebar-ring: oklch(0.46 0.21 26.5);
+
+    /* Re-ajuste de variables de layout para consistencia en Dark Mode */
+    --sea-ink: #ffffff;
+    --sea-ink-soft: oklch(0.65 0.02 50);
+    --lagoon: var(--color-crema);
+    --lagoon-deep: #ffffff;
+    --palm: var(--color-rojo);
+    --sand: #121212;
+    --foam: #1a1a1a;
+    --surface: rgba(20, 20, 20, 0.7);
+    --surface-strong: rgba(26, 26, 26, 0.9);
+    --line: rgba(255, 255, 255, 0.1);
+    --inset-glint: rgba(255, 255, 255, 0.05);
+    --kicker: var(--color-crema);
+    --bg-base: #0a0a0a;
+    --header-bg: rgba(13, 13, 13, 0.85);
+    --chip-bg: rgba(35, 35, 35, 0.9);
+    --chip-line: rgba(244, 213, 182, 0.2);
+    --link-bg-hover: rgba(255, 255, 255, 0.04);
+    --hero-a: rgba(191, 23, 33, 0.12);
+    --hero-b: rgba(0, 0, 0, 0.5);
 }
 
 @theme inline {
-  --font-sans: 'Kanit', sans-serif;
-  --font-kanit: 'Kanit', sans-serif;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --font-heading: var(--font-sans);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
-}
-
-html,
-body,
-#app {
-  min-height: 100%;
-}
-
-body {
-  margin: 0;
-  color: var(--sea-ink);
-  font-family: var(--font-sans);
-  background-color: var(--bg-base);
-  background:
-    radial-gradient(1100px 620px at -8% -10%, var(--hero-a), transparent 58%),
-    radial-gradient(1050px 620px at 112% -12%, var(--hero-b), transparent 62%),
-    radial-gradient(720px 380px at 50% 115%, rgba(79, 184, 178, 0.1), transparent 68%),
-    linear-gradient(180deg, color-mix(in oklab, var(--sand) 68%, white) 0%, var(--foam) 44%, var(--bg-base) 100%);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.28;
-  background:
-    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.8), transparent 34%),
-    radial-gradient(circle at 78% 26%, rgba(79, 184, 178, 0.2), transparent 42%),
-    radial-gradient(circle at 42% 82%, rgba(47, 106, 74, 0.14), transparent 36%);
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.14;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 28px 28px;
-  mask-image: radial-gradient(circle at 50% 30%, black, transparent 78%);
-}
-
-a {
-  color: var(--lagoon-deep);
-  text-decoration-color: rgba(50, 143, 151, 0.4);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-a:hover {
-  color: #246f76;
-}
-
-code {
-  font-size: 0.9em;
-  border: 1px solid var(--line);
-  background: color-mix(in oklab, var(--surface-strong) 82%, white 18%);
-  border-radius: 7px;
-  padding: 2px 7px;
-}
-
-pre code {
-  border: 0;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  font-size: inherit;
-  color: inherit;
-}
-
-.prose pre {
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: #1d2e45;
-  color: #e8efff;
-}
-
-.page-wrap {
-  width: min(1080px, calc(100% - 2rem));
-  margin-inline: auto;
-}
-
-.display-title {
-  font-family: 'Fraunces', Georgia, serif;
-}
-
-.island-shell {
-  border: 1px solid var(--line);
-  background: linear-gradient(165deg, var(--surface-strong), var(--surface));
-  box-shadow:
-    0 1px 0 var(--inset-glint) inset,
-    0 22px 44px rgba(30, 90, 72, 0.1),
-    0 6px 18px rgba(23, 58, 64, 0.08);
-  backdrop-filter: blur(4px);
-}
-
-.feature-card {
-  background: linear-gradient(165deg, color-mix(in oklab, var(--surface-strong) 93%, white 7%), var(--surface));
-  box-shadow:
-    0 1px 0 var(--inset-glint) inset,
-    0 18px 34px rgba(30, 90, 72, 0.1),
-    0 4px 14px rgba(23, 58, 64, 0.06);
-}
-
-.feature-card:hover {
-  transform: translateY(-2px);
-  border-color: color-mix(in oklab, var(--lagoon-deep) 35%, var(--line));
-}
-
-button,
-.island-shell,
-a {
-  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
-    transform 180ms ease;
-}
-
-.island-kicker {
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.69rem;
-  color: var(--kicker);
-}
-
-.nav-link {
-  position: relative;
-  text-decoration: none;
-  color: var(--sea-ink-soft);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: linear-gradient(90deg, var(--lagoon), #7ed3bf);
-  transition: transform 170ms ease;
-}
-
-.nav-link:hover,
-.nav-link.is-active {
-  color: var(--sea-ink);
-}
-
-.nav-link:hover::after,
-.nav-link.is-active::after {
-  transform: scaleX(1);
-}
-
-.rise-in {
-  animation: rise-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-@keyframes rise-in {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.site-footer {
-  border-top: 1px solid var(--line);
-  background: color-mix(in oklab, var(--header-bg) 84%, transparent 16%);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    background-color: var(--background);
-    color: var(--foreground);
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
-  }
+    --font-sans: "Kanit", sans-serif;
+    --font-kanit: "Kanit", sans-serif;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --font-heading: var(--font-sans);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
 }
