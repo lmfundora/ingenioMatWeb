@@ -18,25 +18,32 @@ const WhyUss = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Image Card */}
-          <div className="lg:col-span-5">
-            <div className="relative overflow-hidden rounded-2xl border border-border shadow-xl aspect-[4/5] bg-muted group">
+          {/* Left Image Card — CSS 3D perspective wrapper */}
+          <div className="lg:col-span-5 [perspective:1200px]">
+            {/* Static tilt + hover lift — pure CSS, zero JS */}
+            <div className="relative overflow-hidden rounded-2xl border border-border shadow-xl aspect-[4/5] bg-muted group
+                            [transform-style:preserve-3d]
+                            [transform:rotateY(8deg)_rotateX(3deg)]
+                            transition-all duration-500
+                            hover:[transform:rotateY(0deg)_rotateX(0deg)_translateZ(30px)]
+                            hover:shadow-2xl hover:border-primary/40">
               <img
                 src="/assets/images23.png"
                 alt="Producción y stock de materiales de construcción"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex flex-col justify-end p-8 text-left text-white">
-                <div className="flex items-center gap-2 mb-2 text-primary">
+              {/* Gradient overlay + floating text — lifted on its own Z layer */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent flex flex-col justify-end p-8 text-left text-white [transform:translateZ(20px)] [transform-style:preserve-3d]">
+                <div className="flex items-center gap-2 mb-2 text-primary [transform:translateZ(15px)]">
                   <Factory className="w-5 h-5" />
                   <span className="text-xs font-bold uppercase tracking-wider">
                     Infraestructura y Capacidad
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">
+                <h3 className="text-2xl font-bold mb-2 [transform:translateZ(15px)]">
                   Retiro Ágil en Planta
                 </h3>
-                <p className="text-sm text-gray-300">
+                <p className="text-sm text-gray-300 [transform:translateZ(10px)]">
                   Cargamos tus vehículos directamente en nuestras instalaciones, optimizando los tiempos para que tu obra nunca se detenga.
                 </p>
               </div>

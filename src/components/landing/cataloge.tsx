@@ -77,7 +77,7 @@ const Cataloge = () => {
     },
   ];
   return (
-    <section id="catalogo" className="py-20 bg-accent/20">
+    <section id="catalogo" className="py-20 bg-[#f5f0e8] dark:bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
@@ -99,17 +99,24 @@ const Cataloge = () => {
           {catalogItems.map((item) => (
             <div
               key={item.id}
-              className="bg-card text-card-foreground rounded-2xl border border-border shadow-md overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/45 group"
-            >
-              {/* Product Category Image */}
-              <div className="h-56 bg-muted relative overflow-hidden shrink-0 border-b border-border">
+              className="
+                bg-[#f5f0e8] dark:bg-card text-card-foreground rounded-3xl overflow-hidden flex flex-col
+                transition-all duration-400
+                shadow-[6px_6px_14px_#d8d0c4,-6px_-6px_14px_#ffffff]
+                hover:scale-102
+                group cursor-pointer
+              ">
+              {/* Product Category Image — inset neumorphic frame */}
+              <div className="h-56 relative overflow-hidden shrink-0 rounded-t-3xl
+                              shadow-[inset_4px_4px_10px_#c8cacc,inset_-4px_-4px_10px_#ffffff]
+                              dark:shadow-none">
                 <img
                   src={item.img}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5">
-                  <span className="text-xs font-bold uppercase tracking-wider text-white bg-primary/90 backdrop-blur-sm px-2.5 py-1 rounded">
+                  <span className="text-xs font-bold uppercase tracking-wider text-white bg-primary/90 backdrop-blur-sm px-2.5 py-1 rounded-full">
                     Ver Catálogo
                   </span>
                 </div>
@@ -137,7 +144,12 @@ const Cataloge = () => {
                   ))}
                 </ul>
 
-                <Button className="w-full font-semibold bg-accent text-accent-foreground hover:bg-primary hover:text-primary-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                <Button className="
+                  w-full text-white
+                  rounded-xl
+                  bg-primary dark:bg-accent
+                  shadow-[3px_3px_7px_#d8d0c4,-3px_-3px_7px_#ffffff]
+                ">
                   Solicitar Cotización <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
               </div>

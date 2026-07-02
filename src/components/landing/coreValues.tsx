@@ -1,7 +1,19 @@
+import GPattern from "../ui/GPattern";
+
 const CoreValues = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-20 bg-background relative overflow-hidden">
+      {/* Full-section G-pattern watermark — fades downward */}
+      <GPattern
+        cols={10}
+        rows={3}
+        variant="primary"
+        opacity="opacity-[0.04]"
+        fontSize="text-8xl"
+        className="absolute top-0 left-0 w-full h-64 z-0 [mask-image:linear-gradient(to_bottom,black_30%,transparent_100%)]"
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
             Nuestros Pilares

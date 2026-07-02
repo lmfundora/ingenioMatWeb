@@ -1,4 +1,5 @@
 import { Button } from "../ui/button";
+import GPattern from "../ui/GPattern";
 
 const Cta = () => {
   return (
@@ -8,6 +9,15 @@ const Cta = () => {
           {/* Background design elements */}
           <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-primary/10 pointer-events-none"></div>
           <div className="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+          {/* Brand G-pattern watermark — top-left corner */}
+          <GPattern
+            cols={7}
+            rows={4}
+            variant="white"
+            opacity="opacity-[0.04]"
+            fontSize="text-8xl"
+            className="absolute -top-4 -left-4 w-2/3 h-full z-0"
+          />
 
           <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Column Text */}
