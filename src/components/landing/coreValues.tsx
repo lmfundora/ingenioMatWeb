@@ -1,6 +1,28 @@
 import GPattern from "../ui/GPattern";
 
 const CoreValues = () => {
+  const values = [
+    {
+      n: "1",
+      title: "Abastecimiento Garantizado",
+      body: "Mantenemos depósitos estratégicos con stock permanente en cemento, mortero y cal para asegurar que nunca te falten materiales esenciales de cimentación.",
+    },
+    {
+      n: "2",
+      title: "Carga Segura en Planta",
+      body: "Supervisamos y asistimos en la carga ordenada de tus vehículos, asegurando que cubiertas de zinc y carpintería de aluminio se estiben de forma segura para su traslado.",
+    },
+    {
+      n: "3",
+      title: "Asesoramiento en Obra",
+      body: "Nuestros asesores de campo asisten a tu obra para evaluar la dosificación de hormigones o seleccionar las tuberías hidráulicas correctas para el caudal.",
+    },
+    {
+      n: "4",
+      title: "Compromiso Sustentable",
+      body: "Trabajamos con canteras que realizan restauración ecológica y distribuimos materiales de yeso y falso techo con certificaciones de huella de carbono neutra.",
+    },
+  ];
   return (
     <section className="py-20 bg-background relative overflow-hidden">
       {/* Full-section G-pattern watermark — fades downward */}
@@ -24,62 +46,33 @@ const CoreValues = () => {
           <div className="w-16 h-1 bg-primary mx-auto rounded"></div>
         </div>
 
+        {/* Cards — neumorphic on white background */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
-          <div className="p-8 rounded-2xl border border-border bg-accent/40 shadow-sm space-y-4 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
-            <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center shrink-0 font-bold text-lg">
-              1
-            </div>
-            <h3 className="text-lg font-bold text-foreground">
-              Abastecimiento Garantizado
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Mantenemos depósitos estratégicos con stock permanente en cemento,
-              mortero y cal para asegurar que nunca te falten materiales
-              esenciales de cimentación.
-            </p>
-          </div>
+          {values.map((card) => (
+            <div
+              key={card.n}
+              className="p-8 rounded-3xl bg-background dark:bg-card space-y-4 relative overflow-hidden group
+                         shadow-[6px_6px_14px_#d1d1d1,-6px_-6px_14px_#ffffff] dark:shadow-none
+                         hover:scale-[1.02] transition-all duration-300 cursor-default"
+            >
+              {/* Number badge — inset neumorphic */}
+              <div
+                className="w-full gap-4 h-12 rounded-2xl text-primary flex items-center justify-center shrink-0 font-bold text-lg
+                              bg-background dark:bg-primary/10
+                              "
+              >
+                {card.n}
+                <h6 className="text-lg font-semifont-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                  {card.title}
+                </h6>
+              </div>
 
-          <div className="p-8 rounded-2xl border border-border bg-accent/40 shadow-sm space-y-4 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
-            <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center shrink-0 font-bold text-lg">
-              2
+              <div className="h-0.5 w-full bg-primary"></div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {card.body}
+              </p>
             </div>
-            <h3 className="text-lg font-bold text-foreground">
-              Carga Segura en Planta
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Supervisamos y asistimos en la carga ordenada de tus vehículos,
-              asegurando que cubiertas de zinc y carpintería de aluminio se estiben
-              de forma segura para su traslado.
-            </p>
-          </div>
-
-          <div className="p-8 rounded-2xl border border-border bg-accent/40 shadow-sm space-y-4 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
-            <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center shrink-0 font-bold text-lg">
-              3
-            </div>
-            <h3 className="text-lg font-bold text-foreground">
-              Asesoramiento en Obra
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Nuestros asesores de campo asisten a tu obra para evaluar la
-              dosificación de hormigones o seleccionar las tuberías hidráulicas
-              correctas para el caudal.
-            </p>
-          </div>
-
-          <div className="p-8 rounded-2xl border border-border bg-accent/40 shadow-sm space-y-4 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
-            <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center shrink-0 font-bold text-lg">
-              4
-            </div>
-            <h3 className="text-lg font-bold text-foreground">
-              Compromiso Sustentable
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Trabajamos con canteras que realizan restauración ecológica y
-              distribuimos materiales de yeso y falso techo con certificaciones
-              de huella de carbono neutra.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

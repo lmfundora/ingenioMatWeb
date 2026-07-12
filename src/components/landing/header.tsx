@@ -19,18 +19,21 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           <a href="#inicio" className="nav-link is-active">
             Inicio
-          </a>
-          <a href="#ventajas" className="nav-link">
-            Ventajas
           </a>
           <a href="#catalogo" className="nav-link">
             Materiales
           </a>
-          <a href="#calculadora" className="nav-link">
-            Calculadora
+          <a href="#construccion" className="nav-link">
+            Construcción
+          </a>
+          <a href="#solar" className="nav-link">
+            Energía Solar
+          </a>
+          <a href="#ventajas" className="nav-link">
+            Ventajas
           </a>
           <a href="#nosotros" className="nav-link">
             Nosotros
@@ -78,13 +81,6 @@ const Header = () => {
             Inicio
           </a>
           <a
-            href="#ventajas"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-accent hover:text-primary transition-colors"
-          >
-            Ventajas
-          </a>
-          <a
             href="#catalogo"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-accent hover:text-primary transition-colors"
@@ -92,11 +88,25 @@ const Header = () => {
             Materiales
           </a>
           <a
-            href="#calculadora"
+            href="#construccion"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-accent hover:text-primary transition-colors"
           >
-            Calculadora
+            Construcción
+          </a>
+          <a
+            href="#solar"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-accent hover:text-primary transition-colors"
+          >
+            Energía Solar
+          </a>
+          <a
+            href="#ventajas"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2.5 rounded-md text-base font-semibold hover:bg-accent hover:text-primary transition-colors"
+          >
+            Ventajas
           </a>
           <a
             href="#nosotros"

@@ -8,6 +8,8 @@ import Header from "#/components/landing/header";
 import Hero from "#/components/landing/hero";
 import CategoriesChips from "#/components/landing/categoriesChips";
 import WhyUss from "#/components/landing/whiUs";
+import ConstructionCarpentry from "#/components/landing/constructionCarpentry";
+import SolarEnergy from "#/components/landing/solarEnergy";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -19,6 +21,8 @@ function Home() {
       <CategoriesChips />
       <WhyUss />
       <Cataloge />
+      <ConstructionCarpentry />
+      <SolarEnergy />
       <CoreValues />
       <Cta />
       <Advisors />

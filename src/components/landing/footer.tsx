@@ -1,22 +1,19 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background/80 pt-16 pb-8 border-t border-white/10 mt-auto">
+    <footer className="bg-foreground text-background/80 pt-16 pb-8 border-t border-white/10 mt-auto mx-1 mb-1 sm:mx-2 sm:mb-2 rounded-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
           {/* Column 1 Logo and details */}
-          <div className="lg:col-span-2 space-y-5 text-left">
+          <div className="lg:col-span-1 space-y-5 text-left">
             <img
               src="/assets/WhatsApp Image 2026-06-18 at 18.35.29.svg"
               alt="IngenioMat Logo"
               className="h-10 w-auto object-contain bg-white px-2 py-1.5 rounded"
             />
             <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
-              Proveedor integral de materiales para la construcción de alta
-              resistencia. Venta directa de fábrica y asesoramiento técnico sin costo.
+              Líderes en construcción, energía solar con baterías, carpintería de aluminio y suministro de materiales certificados de alta resistencia.
             </p>
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
@@ -34,7 +31,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2 - Quick Links */}
+          {/* Column 2 - Materiales */}
           <div className="text-left space-y-4">
             <h4 className="text-white font-bold text-sm uppercase tracking-wider">
               Materiales
@@ -69,14 +66,6 @@ const Footer = () => {
                   href="#catalogo"
                   className="hover:text-primary transition-colors"
                 >
-                  Carpintería Aluminio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#catalogo"
-                  className="hover:text-primary transition-colors"
-                >
                   Falso Techo y Losas
                 </a>
               </li>
@@ -91,7 +80,56 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3 - Company */}
+          {/* Column 3 - Servicios */}
+          <div className="text-left space-y-4">
+            <h4 className="text-white font-bold text-sm uppercase tracking-wider">
+              Servicios
+            </h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>
+                <a
+                  href="#construccion"
+                  className="hover:text-primary transition-colors"
+                >
+                  Construcción Civil
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#construccion"
+                  className="hover:text-primary transition-colors"
+                >
+                  Carpintería de Aluminio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#solar"
+                  className="hover:text-primary transition-colors"
+                >
+                  Sistemas Solar y Baterías
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#solar"
+                  className="hover:text-primary transition-colors"
+                >
+                  Auditorías Energéticas
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#construccion"
+                  className="hover:text-primary transition-colors"
+                >
+                  Remodelaciones y Acabados
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4 - Company */}
           <div className="text-left space-y-4">
             <h4 className="text-white font-bold text-sm uppercase tracking-wider">
               Empresa
@@ -115,14 +153,6 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#calculadora"
-                  className="hover:text-primary transition-colors"
-                >
-                  Calculadora Estructural
-                </a>
-              </li>
-              <li>
-                <a
                   href="#nosotros"
                   className="hover:text-primary transition-colors"
                 >
@@ -134,31 +164,10 @@ const Footer = () => {
                   href="#contacto"
                   className="hover:text-primary transition-colors"
                 >
-                  Preguntas Frecuentes
+                  Contacto
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Column 4 - Newsletter */}
-          <div className="text-left space-y-4">
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider">
-              Listas de Precios
-            </h4>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              Suscríbete para recibir nuestro boletín quincenal con la lista de
-              precios actualizada de cemento, acero y zinc.
-            </p>
-            <div className="space-y-2">
-              <Input
-                type="email"
-                placeholder="Tu correo electrónico"
-                className="bg-white/5 border-white/10 text-white placeholder-gray-500 focus-visible:ring-primary focus-visible:border-primary text-xs animate-none"
-              />
-              <Button className="w-full text-xs font-bold bg-primary text-white hover:bg-primary/95">
-                Suscribirme Ahora
-              </Button>
-            </div>
           </div>
         </div>
 

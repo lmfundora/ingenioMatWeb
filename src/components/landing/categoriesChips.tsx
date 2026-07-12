@@ -1,8 +1,11 @@
 const CategoriesChips = () => {
   const categories = [
+    "Construcción Civil",
+    "Energía Solar",
+    "Baterías y Respaldo",
+    "Carpintería de Aluminio",
     "Cemento y Arena",
     "Techos de Zinc",
-    "Carpintería de Aluminio",
     "Falso Techo",
     "Losas y Cerámicas",
     "Tuberías Hidráulicas",

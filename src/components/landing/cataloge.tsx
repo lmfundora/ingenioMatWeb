@@ -4,78 +4,43 @@ const Cataloge = () => {
   // Catalogue data
   const catalogItems = [
     {
-      id: "cemento",
-      title: "Cemento, Mortero y Cal",
-      desc: "Bases sólidas para tu estructura con fraguado controlado.",
+      id: "materiales",
+      title: "Materiales de Construcción",
+      desc: "Bases sólidas, áridos y acero certificado para todo tipo de cimientos y estructuras.",
       img: "/assets/saco1.png",
       items: [
         "Cemento Gris de Alta Resistencia",
-        "Mortero Seco Fino y Grueso",
-        "Cal Hidratada de Obra",
-        "Hormigón Elaborado",
+        "Arena Lavada y Gravilla Seleccionada",
+        "Mortero Seco y Cal Hidratada",
+        "Acero Estructural y Varillas",
       ],
     },
     {
-      id: "agregados",
-      title: "Agregados y Rellenos",
-      desc: "Granulometría óptima para mezclas de alta compresión.",
-      img: "/assets/images1.png",
+      id: "energia",
+      title: "Energía Solar y Almacenamiento",
+      desc: "Autonomía energética total con paneles solares monocristalinos y bancos de baterías de litio.",
+      img: "/assets/solar_battery.png",
       items: [
-        "Arena Fina Lavada",
-        "Arena Gruesa Seleccionada",
-        "Gravilla Triturada ¾",
-        "Polvo de Piedra / Relleno",
+        "Paneles Solares Monocristalinos de Alta Gama",
+        "Baterías de Litio LiFePO4 para Respaldo",
+        "Inversores Híbridos Inteligentes con App",
+        "Estudio de Consumo y Diseño a Medida",
       ],
     },
     {
-      id: "zinc",
-      title: "Techos de Zinc y Cubiertas",
-      desc: "Resistencia climática garantizada con chapa galvanizada.",
-      img: "/assets/techos_zinc.png",
-      items: [
-        "Chapa Zinc Ondulada 3.66m",
-        "Paneles Termoacústicos",
-        "Cumbreras y Canaletas",
-        "Tornillos Auto-perforantes",
-      ],
-    },
-    {
-      id: "aluminio",
+      id: "carpinteria",
       title: "Carpintería de Aluminio",
-      desc: "Perfiles estéticos y herméticos para ventanas y puertas.",
+      desc: "Cerramientos de alta precisión, ventanas y puertas diseñadas para el máximo confort acústico y térmico.",
       img: "/assets/carpinteria_aluminio.png",
       items: [
-        "Perfiles de Aluminio Gris/Negro",
-        "Marcos Termolacados",
-        "Accesorios y Herrajes",
-        "Ventanas Corredizas Completas",
-      ],
-    },
-    {
-      id: "tuberias",
-      title: "Tuberías e Instalaciones",
-      desc: "Conducción segura para redes de agua, gas y electricidad.",
-      img: "/assets/manguera.png",
-      items: [
-        "Tuberías Hidráulicas PVC y Termofusión",
-        "Tubos Eléctricos Corrugados",
-        "Accesorios, Codos y Te",
-        "Mangueras de Alta Presión",
-      ],
-    },
-    {
-      id: "falsotecho",
-      title: "Losas y Falsos Techos",
-      desc: "Terminaciones interiores y exteriores elegantes y ligeras.",
-      img: "/assets/falsotecho1.png",
-      items: [
-        "Placas de Falso Techo de Yeso",
-        "Perfiles de Suspensión Metálica",
-        "Losas Aligeradas",
-        "Revestimientos de Fibrocemento",
+        "Ventanas Batientes y Corredizas a Medida",
+        "Mamparas de Vidrio Templado Premium",
+        "Puertas de Aluminio de Alta Seguridad",
+        "Fachadas de Vidrio Comercial y Residencial",
       ],
     },
   ];
+
   return (
     <section id="catalogo" className="py-20 bg-[#f5f0e8] dark:bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,13 +49,11 @@ const Cataloge = () => {
             Nuestro Catálogo
           </span>
           <h2 className="display-title text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-            Soluciones Completas de Obra Negra a Terminaciones
+            Líneas de Productos y Soluciones Certificadas
           </h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded"></div>
           <p className="text-muted-foreground text-sm sm:text-base">
-            Proveemos materiales ensayados y aprobados por laboratorios
-            certificados. Todo disponible para un retiro eficiente en planta para
-            minimizar tus costos y tiempos de carga.
+            Ofrecemos el catálogo líder en materiales estructurales, sistemas fotovoltaicos autónomos y carpintería metálica de alta precisión para tu obra o remodelación.
           </p>
         </div>
 
@@ -105,11 +68,14 @@ const Cataloge = () => {
                 shadow-[6px_6px_14px_#d8d0c4,-6px_-6px_14px_#ffffff]
                 hover:scale-102
                 group cursor-pointer
-              ">
+              "
+            >
               {/* Product Category Image — inset neumorphic frame */}
-              <div className="h-56 relative overflow-hidden shrink-0 rounded-t-3xl
+              <div
+                className="h-56 relative overflow-hidden shrink-0 rounded-t-3xl
                               shadow-[inset_4px_4px_10px_#c8cacc,inset_-4px_-4px_10px_#ffffff]
-                              dark:shadow-none">
+                              dark:shadow-none"
+              >
                 <img
                   src={item.img}
                   alt={item.title}
@@ -144,12 +110,14 @@ const Cataloge = () => {
                   ))}
                 </ul>
 
-                <Button className="
+                <Button
+                  className="
                   w-full text-white
                   rounded-xl
                   bg-primary dark:bg-accent
                   shadow-[3px_3px_7px_#d8d0c4,-3px_-3px_7px_#ffffff]
-                ">
+                "
+                >
                   Solicitar Cotización <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
               </div>
