@@ -1,3 +1,4 @@
+import { Card } from "../ui/card";
 import GPattern from "../ui/GPattern";
 
 const CoreValues = () => {
@@ -24,7 +25,7 @@ const CoreValues = () => {
     },
   ];
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden mt-40">
       {/* Full-section G-pattern watermark — fades downward */}
       <GPattern
         cols={10}
@@ -37,10 +38,10 @@ const CoreValues = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary">
+          <span className="text-xs uppercase tracking-widest text-primary">
             Nuestros Pilares
           </span>
-          <h2 className="display-title text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+          <h2 className="display-title text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground">
             Valores que Respaldan Nuestra Producción
           </h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded"></div>
@@ -49,20 +50,14 @@ const CoreValues = () => {
         {/* Cards — neumorphic on white background */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
           {values.map((card) => (
-            <div
+            <Card
               key={card.n}
-              className="p-8 rounded-3xl bg-background dark:bg-card space-y-4 relative overflow-hidden group
-                         shadow-[6px_6px_14px_#d1d1d1,-6px_-6px_14px_#ffffff] dark:shadow-none
-                         hover:scale-[1.02] transition-all duration-300 cursor-default"
+              className="p-8 rounded-3xl bg-background space-y-4 relative group hover:scale-[1.02] transition-all duration-300 cursor-default"
             >
               {/* Number badge — inset neumorphic */}
-              <div
-                className="w-full gap-4 h-12 rounded-2xl text-primary flex items-center justify-center shrink-0 font-bold text-lg
-                              bg-background dark:bg-primary/10
-                              "
-              >
+              <div className="w-full gap-4 h-12 rounded-2xl text-primary flex items-center justify-center shrink-0 text-lg bg-background dark:bg-primary/10">
                 {card.n}
-                <h6 className="text-lg font-semifont-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                <h6 className="text-lg text-primary group-hover:text-primary transition-colors duration-300">
                   {card.title}
                 </h6>
               </div>
@@ -71,7 +66,7 @@ const CoreValues = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {card.body}
               </p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>

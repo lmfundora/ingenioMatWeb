@@ -3,9 +3,9 @@ import GPattern from "../ui/GPattern";
 
 const Cta = () => {
   return (
-    <section className="py-12 bg-background relative overflow-hidden">
+    <section className="py-12 bg-background relative overflow-hidden mt-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl bg-foreground text-background overflow-hidden border border-white/10 shadow-2xl p-8 md:p-12">
+        <div className="relative rounded-3xl bg-foreground text-background overflow-hidden border border-white/10 p-8 md:p-12">
           {/* Background design elements */}
           <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-transparent to-primary/10 pointer-events-none"></div>
           <div className="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
@@ -33,7 +33,7 @@ const Cta = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button
                   size="lg"
-                  className="h-12 px-8 font-semibold bg-primary hover:bg-primary/95 text-white shadow-lg shadow-primary/25"
+                  className="h-12 px-8 font-semibold bg-primary hover:bg-primary/95 text-white"
                 >
                   Solicitar Presupuesto Gratis
                 </Button>
@@ -49,7 +49,7 @@ const Cta = () => {
 
             {/* Right Column Image overlap */}
             <div className="lg:col-span-5 hidden lg:block relative self-end">
-              <div className="overflow-hidden rounded-2xl border border-white/15 shadow-xl aspect-[1.3] bg-muted transform translate-y-8 translate-x-4">
+              <div className="overflow-hidden rounded-2xl border border-white/15 aspect-[1.3] bg-muted transform translate-y-8 translate-x-4">
                 <img
                   src="/assets/images1.png"
                   alt="Servicio y atencion en Ingeniomat"

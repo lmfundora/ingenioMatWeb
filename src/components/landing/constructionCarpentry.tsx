@@ -4,7 +4,7 @@ import GPattern from "../ui/GPattern";
 
 const ConstructionCarpentry = () => {
   return (
-    <section id="construccion" className="py-20 bg-background relative overflow-hidden">
+    <section id="construccion" className="py-20 bg-background relative overflow-hidden mt-20">
       {/* Brand G-pattern watermark */}
       <GPattern
         cols={8}
@@ -21,21 +21,18 @@ const ConstructionCarpentry = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
             Nuestros Servicios
           </span>
-          <h2 className="display-title text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+          <h2 className="display-title text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground">
             Construcción Civil y Carpintería de Aluminio
           </h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded"></div>
-          <p className="text-muted-foreground text-sm sm:text-base">
-            Combinamos la solidez de la edificación estructural con la precisión estética de la carpintería de aluminio de alta gama para entregar obras perfectas de inicio a fin.
-          </p>
         </div>
 
         {/* 2 Column Services Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Column 1: Construcción */}
-          <div className="bg-[#f5f0e8] dark:bg-card rounded-3xl overflow-hidden flex flex-col transition-all duration-400 shadow-[6px_6px_14px_#d8d0c4,-6px_-6px_14px_#ffffff] dark:shadow-none hover:scale-[1.01] group">
+          <div className="bg-[#f5f0e8] dark:bg-card rounded-3xl overflow-hidden flex flex-col transition-all duration-400 hover:scale-[1.01] group">
             {/* Image frame */}
-            <div className="h-64 relative overflow-hidden rounded-t-3xl shadow-[inset_4px_4px_10px_#c8cacc,inset_-4px_-4px_10px_#ffffff] dark:shadow-none">
+            <div className="h-64 relative overflow-hidden rounded-t-3xl">
               <img
                 src="/assets/dream_house_2.png"
                 alt="Construcción civil y obras"
@@ -70,10 +67,10 @@ const ConstructionCarpentry = () => {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="flex-1 text-white bg-primary shadow-md hover:bg-primary/95 rounded-xl">
+                <Button className="flex-1 text-white bg-primary hover:bg-primary/95 rounded-xl">
                   Cotizar Proyecto <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
-                <Button variant="outline" className="flex-1 border-border rounded-xl">
+                <Button variant="outline" color="primary" className="flex-1 rounded-xl">
                   Hablar con Ingeniero
                 </Button>
               </div>
@@ -81,9 +78,9 @@ const ConstructionCarpentry = () => {
           </div>
 
           {/* Column 2: Carpintería de Aluminio */}
-          <div className="bg-[#f5f0e8] dark:bg-card rounded-3xl overflow-hidden flex flex-col transition-all duration-400 shadow-[6px_6px_14px_#d8d0c4,-6px_-6px_14px_#ffffff] dark:shadow-none hover:scale-[1.01] group">
+          <div className="bg-[#f5f0e8] dark:bg-card rounded-3xl overflow-hidden flex flex-col transition-all duration-400 hover:scale-[1.01] group">
             {/* Image frame */}
-            <div className="h-64 relative overflow-hidden rounded-t-3xl shadow-[inset_4px_4px_10px_#c8cacc,inset_-4px_-4px_10px_#ffffff] dark:shadow-none">
+            <div className="h-64 relative overflow-hidden rounded-t-3xl">
               <img
                 src="/assets/carpinteria_aluminio.png"
                 alt="Carpintería de aluminio premium"
@@ -118,7 +115,7 @@ const ConstructionCarpentry = () => {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="flex-1 text-white bg-primary shadow-md hover:bg-primary/95 rounded-xl">
+                <Button className="flex-1 text-white bg-primary hover:bg-primary/95 rounded-xl">
                   Ver Perfiles y Diseños <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
                 <Button variant="outline" className="flex-1 border-border rounded-xl">

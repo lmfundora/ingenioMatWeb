@@ -1,3 +1,5 @@
+import { Card } from "../ui/card";
+
 const advisors = [
   {
     img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
@@ -49,19 +51,12 @@ const Advisors = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {advisors.map((a) => (
-            <div
+            <Card
               key={a.alt}
-              className="
-                bg-[#f5f0e8] dark:bg-card text-card-foreground rounded-3xl overflow-hidden flex flex-col
-                shadow-[6px_6px_14px_#d8d0c4,-6px_-6px_14px_#ffffff] dark:shadow-none
-                hover:scale-[1.02] transition-all duration-300 cursor-default group
-              "
+              className="bg-[#f5f0e8] dark:bg-card text-card-foreground rounded-3xl overflow-hidden flex flex-col hover:scale-[1.02] transition-all duration-300 cursor-default group"
             >
               {/* Photo — inset neumorphic frame */}
-              <div
-                className="h-64 overflow-hidden relative shrink-0 rounded-t-3xl
-                            shadow-[inset_4px_4px_10px_#d8d0c4,inset_-4px_-4px_10px_#ffffff] dark:shadow-none"
-              >
+              <div className="h-64 overflow-hidden relative shrink-0 rounded-t-3xl">
                 <div className="absolute inset-0 bg-slate-900/10 z-10"></div>
                 <img
                   src={a.img}
@@ -82,7 +77,7 @@ const Advisors = () => {
                   {a.role}
                 </p>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>

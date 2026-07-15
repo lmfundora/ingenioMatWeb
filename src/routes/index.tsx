@@ -18,6 +18,7 @@ function Home() {
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20 flex flex-col font-sans">
       <Header />
       <Hero />
+      <div className="h-24"></div>
       <CategoriesChips />
       <WhyUss />
       <Cataloge />

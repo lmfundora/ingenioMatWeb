@@ -15,12 +15,12 @@ const CategoriesChips = () => {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden bg-foreground py-5 border-y border-border">
+    <div className="relative w-full overflow-hidden bg-background py-5">
       {/* Decorative gradient masks to fade the edges for a very premium look */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-foreground to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-foreground to-transparent z-10 pointer-events-none"></div>
 
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
@@ -31,7 +31,9 @@ const CategoriesChips = () => {
         .animate-marquee:hover {
           animation-play-state: paused;
         }
-      ` }} />
+      `,
+        }}
+      />
 
       <div className="flex w-max animate-marquee">
         {/* List 1 */}
@@ -39,7 +41,7 @@ const CategoriesChips = () => {
           {categories.map((cat, idx) => (
             <div
               key={`cat1-${idx}`}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs md:text-sm font-extrabold tracking-wider uppercase transition-all duration-300 hover:bg-primary/20 hover:border-primary/50 hover:scale-105 cursor-default"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-foreground border border-foreground text-background text-xs md:text-sm font-extrabold tracking-wider uppercase transition-all duration-300 hover:bg-primary hover:border-primary hover:text-primary-foreground hover:scale-105 cursor-default"
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
               {cat}
@@ -51,7 +53,7 @@ const CategoriesChips = () => {
           {categories.map((cat, idx) => (
             <div
               key={`cat2-${idx}`}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white text-xs md:text-sm font-extrabold tracking-wider uppercase transition-all duration-300 hover:bg-primary/20 hover:border-primary/50 hover:scale-105 cursor-default"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-foreground border border-foreground text-background text-xs md:text-sm font-extrabold tracking-wider uppercase transition-all duration-300 hover:bg-primary hover:border-primary hover:text-primary-foreground hover:scale-105 cursor-default"
             >
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
               {cat}
@@ -63,4 +65,3 @@ const CategoriesChips = () => {
   );
 };
 export default CategoriesChips;
-

@@ -42,19 +42,19 @@ const Cataloge = () => {
   ];
 
   return (
-    <section id="catalogo" className="py-20 bg-[#f5f0e8] dark:bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="catalogo"
+      className="py-20 bg-[#f5f0e8] dark:bg-background rounded-b-4xl mx-2 md:mx-4"
+    >
+      <div className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
             Nuestro Catálogo
           </span>
-          <h2 className="display-title text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+          <h2 className="display-title text-3xl sm:text-4xl md:text-5xl tracking-tight text-foreground">
             Líneas de Productos y Soluciones Certificadas
           </h2>
           <div className="w-16 h-1 bg-primary mx-auto rounded"></div>
-          <p className="text-muted-foreground text-sm sm:text-base">
-            Ofrecemos el catálogo líder en materiales estructurales, sistemas fotovoltaicos autónomos y carpintería metálica de alta precisión para tu obra o remodelación.
-          </p>
         </div>
 
         {/* Cards Grid */}
@@ -62,27 +62,17 @@ const Cataloge = () => {
           {catalogItems.map((item) => (
             <div
               key={item.id}
-              className="
-                bg-[#f5f0e8] dark:bg-card text-card-foreground rounded-3xl overflow-hidden flex flex-col
-                transition-all duration-400
-                shadow-[6px_6px_14px_#d8d0c4,-6px_-6px_14px_#ffffff]
-                hover:scale-102
-                group cursor-pointer
-              "
+              className="bg-[#f5f0e8] bg-white text-card-foreground rounded-3xl overflow-hidden flex flex-col transition-all duration-400 hover:scale-102 group cursor-pointer"
             >
               {/* Product Category Image — inset neumorphic frame */}
-              <div
-                className="h-56 relative overflow-hidden shrink-0 rounded-t-3xl
-                              shadow-[inset_4px_4px_10px_#c8cacc,inset_-4px_-4px_10px_#ffffff]
-                              dark:shadow-none"
-              >
+              <div className="h-56 relative overflow-hidden shrink-0 rounded-t-3xl">
                 <img
                   src={item.img}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-5">
-                  <span className="text-xs font-bold uppercase tracking-wider text-white bg-primary/90 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                  <span className="text-xs uppercase tracking-wider text-white bg-primary/90 backdrop-blur-sm px-2.5 py-1 rounded-full">
                     Ver Catálogo
                   </span>
                 </div>
@@ -90,7 +80,7 @@ const Cataloge = () => {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-grow text-left">
-                <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                <h3 className="text-xl text-foreground mb-1 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-xs text-muted-foreground mb-4">
@@ -110,15 +100,8 @@ const Cataloge = () => {
                   ))}
                 </ul>
 
-                <Button
-                  className="
-                  w-full text-white
-                  rounded-xl
-                  bg-primary dark:bg-accent
-                  shadow-[3px_3px_7px_#d8d0c4,-3px_-3px_7px_#ffffff]
-                "
-                >
-                  Solicitar Cotización <ChevronRight className="w-4 h-4 ml-1" />
+                <Button className="w-full text-white rounded-xl bg-primary dark:bg-accent justify-between px-5">
+                  Solicitar Cotización <ChevronRight className="w-4 h-4" />
                 </Button>
               </div>
             </div>
