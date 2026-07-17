@@ -3,8 +3,12 @@ import { authComponent, createAuth } from "./auth";
 
 const http = httpRouter();
 
-authComponent.registerRoutes(http, createAuth, {
-  cors: true,
-});
+try {
+  authComponent.registerRoutes(http, createAuth, {
+    cors: true,
+  });
+} catch (error) {
+  console.error("Failed to register auth routes:", error);
+}
 
 export default http;
