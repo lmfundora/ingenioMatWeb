@@ -6,8 +6,9 @@ import { query } from "./_generated/server";
 import { betterAuth, type BetterAuthOptions } from "better-auth/minimal";
 import authConfig from "./auth.config";
 
-const siteUrl = process.env.SITE_URL || 
-  process.env.VERCEL_URL && `https://${process.env.VERCEL_URL}` || 
+const siteUrl =
+  process.env.SITE_URL ||
+  (process.env.VERCEL_URL && `https://${process.env.VERCEL_URL}`) ||
   "http://localhost:3000";
 
 // The component client has methods needed for integrating Convex with Better Auth,
@@ -25,23 +26,19 @@ export const createAuth = (ctx: GenericCtx<DataModel>) => {
     },
   };
 
-  // Only add crossDomain plugin if siteUrl is properly configured
   if (siteUrl && siteUrl !== "http://localhost:3000") {
-    config.plugins = [
-      crossDomain({ siteUrl }),
-      convex({ authConfig }),
-    ];
+    config.plugins = [crossDomain({ siteUrl }), convex({ authConfig })];
   } else {
-    config.plugins = [
-      convex({ authConfig }),
-    ];
+    config.plugins = [convex({ authConfig })];
   }
 
   try {
     return betterAuth(config);
   } catch (error) {
     console.error("Failed to initialize Better Auth:", error);
-    throw new Error(`Auth initialization failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    throw new Error(
+      `Auth initialization failed: ${error instanceof Error ? error.message : "Unknown error"}`,
+    );
   }
 };
 
