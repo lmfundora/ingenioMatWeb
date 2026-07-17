@@ -1,0 +1,10 @@
+{"name":"account","id":10001}
+{"name":"oauthAccessToken","id":10002}
+{"name":"oauthApplication","id":10003}
+{"name":"oauthConsent","id":10004}
+{"name":"rateLimit","id":10005}
+{"name":"session","id":10006}
+{"name":"twoFactor","id":10007}
+{"name":"user","id":10008}
+{"name":"verification","id":10009}
+{"name":"jwks","id":10010}
